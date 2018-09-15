@@ -6,28 +6,11 @@
 
     </head>
     <body>
-        <script>
-
-            window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '321585578575368',
-                    autoLogAppEvents: true,
-                    xfbml: true,
-                    version: 'v3.1'
-                });
-            };
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {
-                    return;
-                }
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-
-        <script>var i = "<?php echo $_GET['urlNet'] ?>";</script>
+       <?php 
+       require 'LinkManager.php';
+       $i = LinkManager::FacebookLink($_GET['urlNet']);
+       
+       ?>"
 
 
         <div id="container" >
@@ -78,12 +61,12 @@
                 </script>
             </div>
 
-<!--            <div id="embbed">
+            <div id="embbed">
                 <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" 
                 async></script>  
                 <div class="fb-post" style="height: 100%"
                      data-href="<?php echo $i->link ?>"
-                     data-width="auto"></div>-->
+                     data-width="auto"></div>
 
             </div>  
 

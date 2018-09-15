@@ -16,7 +16,7 @@ and open the template in the editor.
     </head>
 
     <body>
-      
+           
         <script src="scripts.js"> </script>
 
         <div id="container" style="width: 100%;height: 100%;background-color: white "
@@ -24,14 +24,14 @@ and open the template in the editor.
              <div id="container2" style="width: 80%;height: 80%;background-color: red;margin: 5% ">
 
 
-                 <form id="f1" action="/try/ChartBuilder.php" method="GET" >
+                 <form id="f1" action="/Social-Plugin/ChartBuilder.php" method="GET" >
                     
                     <div class="row">
 
                         <div class="col-md-offset-1 col-md-4"><label>Net Link</label></div>
 
                         <div class="col-md-4"><input class="form-control" name="urlNet" type="text" />
-                            <input type="button" onclick="getAPI('/2159551344295254')" /></div>
+                            <input type="submit" /></div>
 
                             <div class="col-md-offset-1 col-md-4"><label>Facebook</label></div>
                             <div class="col-md-4"><input class="form-control" name="mode" type="radio"/></div>
@@ -77,21 +77,6 @@ and open the template in the editor.
 
 
             </div>
-        </div>
-
-        <?php
-        require 'LinkManager.php';
-        require 'FacebookGraphAPI.php';
-
-
-
-        $i = LinkManager::FacebookLink('https://www.facebook.com/ecuador512/photos/a.476655172382422/1805405632840696/?type=3&theater');
-        ?>
-
-        <a href="ChartBuilder.php" target="_blank">
-
-            <p>click</p>
-        </a>    
 
     </body>
 
